@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RAU MÁ XAY TƯƠI</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #e8f5e9, #fffde7);
+      color: #33691e;
+    }
+    header {
+      background: #a5d6a7;
+      padding: 30px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header h1 {
+      font-size: 3.5em;
+      color: #1b5e20;
+      text-shadow: 2px 2px 4px #cddc39;
+      animation: floatText 5s infinite ease-in-out;
+    }
+    header p {
+      font-size: 1.2em;
+      color: #33691e;
+    }
+    @keyframes floatText {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .menu-container {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 20px;
+      flex-wrap: wrap;
+    }
+    .menu-box {
+      background-color: #ffffff;
+      border: 3px solid #cddc39;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(46, 125, 50, 0.2);
+      padding: 25px 30px;
+      width: 300px;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .menu-box:hover {
+      transform: scale(1.05);
+    }
+    .menu-box h2 {
+      font-size: 2em;
+      color: #558b2f;
+      text-shadow: 1px 1px 2px #aeea00;
+    }
+    .menu-content {
+      display: none;
+      padding: 20px;
+      background: #f9fbe7;
+    }
+    .menu-content.active {
+      display: block;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    td {
+      padding: 8px 6px;
+      font-size: 1.1em;
+    }
+    td.price {
+      text-align: right;
+      width: 80px;
+      font-weight: 600;
+      color: #689f38;
+    }
+    .contact {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .contact a {
+      display: inline-block;
+      margin: 5px 10px;
+      color: #1b5e20;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .zalo-button {
+      display: inline-block;
+      background-color: #0084ff;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 30px;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+  </style>
+  <script>
+    function toggleMenu(id) {
+      document.querySelectorAll('.menu-content').forEach(div => div.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>RAU MÁ XAY TƯƠI</h1>
+    <p>Cửa hàng hoa quả tươi và nước ép</p>
+  </header>
+
+  <div class="menu-container">
+    <div class="menu-box" onclick="toggleMenu('menu-rauma')">
+      <h2>Menu Rau Má</h2>
+    </div>
+    <div class="menu-box" onclick="toggleMenu('menu-nuocep')">
+      <h2>Menu Nước Ép</h2>
+    </div>
+  </div>
+
+  <!-- RAU MÁ -->
+  <div id="menu-rauma" class="menu-content">
+    <p>RAU MÁ XAY TƯƠI là thương hiệu chuyên cung cấp các sản phẩm giải khát từ rau má nguyên chất và các loại nước ép trái cây tươi. Với tiêu chí “Tươi – Sạch – Ngon – Bổ”, quán cam kết sử dụng nguyên liệu tự nhiên, không chất bảo quản, được chọn lọc kỹ lưỡng từ các nông trại sạch, đảm bảo sức khỏe cho người tiêu dùng.</p>
+    <table>
+      <tr><td>• RAU MÁ Nguyên Chất</td><td class="price">11.000đ</td><td class="price">16.000đ</td><td class="price">22.000đ</td></tr>
+      <tr><td>• RAU MÁ Sữa</td><td class="price">13.000đ</td><td class="price">18.000đ</td><td class="price">25.000đ</td></tr>
+      <tr><td>• RAU MÁ MIX Đậu Xanh</td><td class="price">15.000đ</td><td class="price">20.000đ</td><td class="price">28.000đ</td></tr>
+    </table>
+    <div class="contact">
+      <a href="tel:0987622653">📞 Gọi: 0987 622 653</a>
+      <a class="zalo-button" href="https://zalo.me/0987622653" target="_blank">Zalo Đặt Ngay</a>
+    </div>
+  </div>
+
+  <!-- NƯỚC ÉP -->
+  <div id="menu-nuocep" class="menu-content">
+    <p>RAU MÁ XAY TƯƠI cung cấp các loại nước ép trái cây tươi, đảm bảo giữ trọn hương vị tự nhiên, bổ dưỡng, tốt cho sức khỏe. Phù hợp với xu hướng sống xanh của giới trẻ hiện nay.</p>
+    <table>
+      <tr><td>• NƯỚC ÉP Dưa Hấu</td><td class="price">18.000đ</td><td class="price">25.000đ</td><td class="price">35.000đ</td></tr>
+      <tr><td>• NƯỚC ÉP Cam</td><td class="price">18.000đ</td><td class="price">25.000đ</td><td class="price">35.000đ</td></tr>
+      <tr><td>• NƯỚC ÉP Bưởi</td><td class="price">25.000đ</td><td class="price">35.000đ</td><td class="price">50.000đ</td></tr>
+    </table>
+    <div class="contact">
+      <a href="tel:0987622653">📞 Gọi: 0987 622 653</a>
+      <a class="zalo-button" href="https://zalo.me/0987622653" target="_blank">Zalo Đặt Ngay</a>
+    </div>
+  </div>
+  <div style="text-align: center; margin: 40px 0;">
+    <h3>📍 Địa chỉ quán</h3>
+    <p>106 Đ. B, P, Thủ Đức, Hồ Chí Minh 700000, Việt Nam</p>
+    <iframe
+      src="https://www.google.com/maps?q=106+Đ.+B,+Thủ+Đức,+Hồ+Chí+Minh,+Việt+Nam&output=embed"
+      width="300"
+      height="250"
+      style="border:0; border-radius: 15px; box-shadow: 0 0 10px rgba(0,0,0,0.1);"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+    <br>
+    <a href="https://www.google.com/maps/place/106+Đ.+B,+Thủ+Đức,+Hồ+Chí+Minh,+Việt+Nam" 
+       target="_blank"
+       style="display: inline-block; margin-top: 10px; text-decoration: none; font-weight: bold; color: #1b5e20;">
+      👉 Xem bản đồ lớn trên Google Maps
+    </a>
+  </div>
+  
+</body>
+</html>
